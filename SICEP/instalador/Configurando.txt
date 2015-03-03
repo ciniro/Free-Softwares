@@ -1,0 +1,12 @@
+PARA INSTALAR
+-Instale o Framework .NET na máquina
+-Instale o SQL Server 2000
+-Instale o SICEP 1.0
+
+-carregue o banco para o SQL Server
+(C:\Arquivos de programas\SICEP\data\bd_sicep.mdf)
+
+
+
+-DLL's Business Objects e Crystal Decisions
+C:\Arquivos de programas\Arquivos comuns\

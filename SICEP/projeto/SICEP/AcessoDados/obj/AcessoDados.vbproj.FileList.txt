@@ -1,0 +1,10 @@
+bin\Debug\AcessoDados.dll
+bin\Debug\AcessoDados.pdb
+bin\Debug\AcessoDados.xml
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\AcessoDados.Resources.resources
+obj\Debug\AcessoDados.vbproj.GenerateResource.Cache
+obj\Debug\AcessoDados.dll
+obj\Debug\AcessoDados.xml
+obj\Debug\AcessoDados.pdb
+bin\Debug\AcessoDados.dll.config

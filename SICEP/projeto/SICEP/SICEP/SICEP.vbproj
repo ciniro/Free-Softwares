@@ -1,0 +1,507 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6E05E5BA-89C5-4086-9C84-7758319D4FBA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>SICEP.My.MyApplication</StartupObject>
+    <RootNamespace>SICEP</RootNamespace>
+    <AssemblyName>SICEP</AssemblyName>
+    <MyType>WindowsForms</MyType>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <ApplicationIcon>imagens\sicepICONE.ico</ApplicationIcon>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>http://localhost/SICEP/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsLocation>Relative</BootstrapperComponentsLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SICEP.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SICEP.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\WINDOWS\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="CrystalDecisions" />
+    <Import Include="CrystalDecisions.CrystalReports" />
+    <Import Include="CrystalDecisions.CrystalReports.ViewerObjectModel" />
+    <Import Include="CrystalDecisions.Enterprise" />
+    <Import Include="CrystalDecisions.ReportSource" />
+    <Import Include="CrystalDecisions.Windows" />
+    <Import Include="CrystalDecisions.Windows.Forms" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="frmCadMaterial.Designer.vb">
+      <DependentUpon>frmCadMaterial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadMaterial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSobre.Designer.vb">
+      <DependentUpon>frmSobre.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSobre.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAjuda.Designer.vb">
+      <DependentUpon>frmAjuda.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAjuda.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBackup.Designer.vb">
+      <DependentUpon>frmBackup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBackup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadMedicamento.Designer.vb">
+      <DependentUpon>frmCadMedicamento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadMedicamento.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadMicroarea.Designer.vb">
+      <DependentUpon>frmCadMicroarea.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadMicroarea.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadPaciente.Designer.vb">
+      <DependentUpon>frmCadPaciente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadPaciente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadUsuario.Designer.vb">
+      <DependentUpon>frmCadUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditaEntPoliclinica.Designer.vb">
+      <DependentUpon>frmEditaEntPoliclinica.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditaEntPoliclinica.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditaEntSecretaria.Designer.vb">
+      <DependentUpon>frmEditaEntSecretaria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditaEntSecretaria.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditaSaiPoliclinica.Designer.vb">
+      <DependentUpon>frmEditaSaiPoliclinica.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditaSaiPoliclinica.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditaSaiSecretaria.Designer.vb">
+      <DependentUpon>frmEditaSaiSecretaria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditaSaiSecretaria.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEntPoliclinica.Designer.vb">
+      <DependentUpon>frmEntPoliclinica.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEntPoliclinica.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEntSecretaria.Designer.vb">
+      <DependentUpon>frmEntSecretaria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEntSecretaria.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEstPoliclinica.Designer.vb">
+      <DependentUpon>frmEstPoliclinica.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEstPoliclinica.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEstSecretaria.Designer.vb">
+      <DependentUpon>frmEstSecretaria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEstSecretaria.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipal.Designer.vb">
+      <DependentUpon>frmPrincipal.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCalendario.Designer.vb">
+      <DependentUpon>frmCalendario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCalendario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRelatorios.Designer.vb">
+      <DependentUpon>frmRelatorios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRelatorios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSaiPoliclinica.Designer.vb">
+      <DependentUpon>frmSaiPoliclinica.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSaiPoliclinica.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSaiSecretaria.Designer.vb">
+      <DependentUpon>frmSaiSecretaria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSaiSecretaria.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSplash.Designer.vb">
+      <DependentUpon>frmSplash.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSplash.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmCadMaterial.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCadMaterial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSobre.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSobre.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAjuda.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAjuda.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBackup.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmBackup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadMedicamento.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCadMedicamento.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadMicroarea.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCadMicroarea.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadPaciente.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCadPaciente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadUsuario.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCadUsuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCalendario.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCalendario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditaEntPoliclinica.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmEditaEntPoliclinica.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditaEntSecretaria.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmEditaEntSecretaria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditaSaiPoliclinica.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmEditaSaiPoliclinica.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditaSaiSecretaria.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmEditaSaiSecretaria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEntPoliclinica.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmEntPoliclinica.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEntSecretaria.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmEntSecretaria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEstPoliclinica.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmEstPoliclinica.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEstSecretaria.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmEstSecretaria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmPrincipal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRelatorios.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmRelatorios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSaiPoliclinica.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSaiPoliclinica.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSaiSecretaria.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSaiSecretaria.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSplash.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSplash.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imagens\bg_1024.jpg" />
+    <None Include="imagens\bg_800.jpg" />
+    <None Include="imagens\bg_form800600.jpg" />
+    <None Include="imagens\bg_splash.jpg" />
+    <None Include="imagens\botoes\bt_alterar.bmp" />
+    <None Include="imagens\botoes\bt_cancelar.bmp" />
+    <None Include="imagens\botoes\bt_excluir.bmp" />
+    <None Include="imagens\botoes\bt_novo.bmp" />
+    <None Include="imagens\botoes\bt_sair.bmp" />
+    <None Include="imagens\botoes\bt_salvar.bmp" />
+    <None Include="imagens\informacoes.gif" />
+    <None Include="imagens\infos.gif" />
+    <None Include="imagens\icones\pacientes.bmp" />
+    <None Include="imagens\icones\pac.bmp" />
+    <None Include="imagens\icones\usu.bmp" />
+    <None Include="imagens\icones\med.bmp" />
+    <None Include="imagens\icones\micro.bmp" />
+    <None Include="imagens\icones\saiSecretaria.bmp" />
+    <None Include="imagens\icones\entPoliclinica.bmp" />
+    <None Include="imagens\icones\entSecretaria.bmp" />
+    <None Include="imagens\icones\EstoquePoli.bmp" />
+    <None Include="imagens\icones\EstoqueSec.bmp" />
+    <None Include="imagens\icones\relPoliclinica.bmp" />
+    <None Include="imagens\icones\relSecretaria.bmp" />
+    <None Include="imagens\icones\saiPoliclinica.bmp" />
+    <None Include="imagens\icones\rel.bmp" />
+    <None Include="imagens\icones\relCadastros.bmp" />
+    <None Include="imagens\icones\cadastros.bmp" />
+    <None Include="imagens\icones\arquivo.bmp" />
+    <None Include="imagens\icones\quantidade.bmp" />
+    <None Include="imagens\icones\sai.bmp" />
+    <None Include="imagens\icones\entra.bmp" />
+    <None Include="imagens\icones\ferramentas.bmp" />
+    <None Include="imagens\icones\backup.bmp" />
+    <None Include="imagens\icones\logoff.bmp" />
+    <None Include="imagens\icones\sair.bmp" />
+    <None Include="imagens\icones\calculadora.bmp" />
+    <None Include="imagens\icones\blocodenotas.bmp" />
+    <None Include="imagens\icones\calendario.bmp" />
+    <None Include="imagens\icones\ajuda.bmp" />
+    <None Include="imagens\icones\ajudaSICEP.bmp" />
+    <None Include="imagens\icones\sobre.bmp" />
+    <None Include="imagens\icones\material.bmp" />
+    <None Include="imagens\about.jpg" />
+    <Content Include="imagens\sicepICONE.ico" />
+    <None Include="imagens\sobre.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CamadaDeNegocios\CamadaDeNegocios.vbproj">
+      <Project>{6E29A6EA-2E9E-41C6-B989-E7982284C5DF}</Project>
+      <Name>CamadaDeNegocios</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AgentObjects">
+      <Guid>{F5BE8BC2-7DE6-11D0-91FE-00C04FD701A5}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxAgentObjects">
+      <Guid>{F5BE8BC2-7DE6-11D0-91FE-00C04FD701A5}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="BusinessObjects.CrystalReports.NET.2.0">
+      <Visible>False</Visible>
+      <ProductName>Crystal Reports for .NET Framework 2.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.ReportViewer.8.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft Visual Studio 2005 Report Viewer</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="CrystalDecisions.CrystalReports.Engine">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.Enterprise.Framework">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.Enterprise.InfoStore">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportSource">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.Shared">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.Windows.Forms">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

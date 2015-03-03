@@ -1,0 +1,150 @@
+<<<<<<<DEFINICAO DE CADASTROS E OPERACOES PARA O SICEP 1.0>>>>>>>>>>>>
+
+Este levantamento escopo foi definido com base nas informacoes 
+coletadas numa primeira reuniao feita no dia 26/07/2006
+entre (Analista), (Secretária de Saúde) e (Policlinica)
+e estão sujeitas a possiveis modificações
+
+
+
+
+
+>>>>>FUNCOES E OPERACOES DETERMINADAS
+
+>CADASTRO DE USUARIOS
+>CADASTRO DE MICROAREAS
+>CADASTRO DE PACIENTES
+>CADASTRO DE MEDICAMENTOS
+
+>ENTRADAS NO ESTOQUE DA SECRETARIA
+>SAIDAS NO ESTOQUE DA SECRETARIA
+
+>ENTRADAS NO ESTOQUE DA POLICLINICA
+>SAIDAS NO ESTOQUE DA POLICLINICA
+
+>RELATORIOS
+
+------------------------------------------------------------------
+
+CADASTRO DE USUARIOS
+
+Codigo(Obrigatorio)
+Data de Cadastramento(Obrigatorio)
+Nome (Obrigatorio)
+Cargo (Obrigatorio)
+Endereco
+Telefone Residencial
+Telefone Celular
+Email
+CPF(Obrigatorio)
+RG(Obrigatorio)
+Login(Obrigatorio)
+Senha(Obrigatorio)
+Perfil(Obrigatorio)
+
+PERFIS - administrador (TUDO)
+	 visitante (NADA)
+         Usuario da Secretaria (Paciente,Relatorios da secretaria,Entradas Sec e Saidas Sec)
+	 Usuario da Policlinica(Paciente,Relatorios da policlinica,Entradas Poli e Saidas Poli)
+
+--------------------------------------------------------------------
+
+CADASTRO DE MICRO-AREA
+
+Codigo(Obrigatorio)
+Data de Cadastramento(Obrigatorio)
+Nome do Agente(Obrigatorio)
+Observacoes
+
+--------------------------------------------------------------------
+
+CADASTRO DE PACIENTES
+
+Codigo(Obrigatorio)
+Data de Cadastramento(Obrigatorio)
+Nome(Obrigatorio)
+Endereco(Obrigatorio)
+Telefone
+CPF
+RG
+MicroArea(Obrigatorio)
+Data de Nascimento(Obrigatorio)
+Nome da Mae
+Sexo(Obrigatorio)
+
+---------------------------------------------------------------------
+
+CADASTRO DE MEDICAMENTOS
+
+Codigo(Obrigatorio)
+Data do Cadastramento(Obrigatorio)
+Nome(Obrigatorio)
+Composição(Obrigatorio)	
+Informações(Default: "Indicações: Contra-Indicações: Posologias: Advertencias:
+Conduta na superdosagem: Reacoes Adversas:"
+
+------------------------------------------------------------------------
+
+>>>>>>SECRETARIA
+
+ENTRADA DE MEDICAMENTOS
+
+Lote
+No da Nota
+Medicamento(Obrigatorio)
+Quantidade(Obrigatorio)
+Validade(Obrigatorio)
+Usuario Cadastrante(Obrigatorio)
+Data da Entrada(Obrigatorio)
+
+SAIDA DE MEDICAMENTOS
+
+Apresenta medicamento+validade+quantidade, escolhe-se e guarda:
+
+Medicamento(Obrigatorio)
+Validade(Obrigatorio)
+Quantidade Retirada(Obrigatorio)
+Data da Retirada(Obrigatorio)
+Usuario Cadastrante(Obrigatorio)
+Regiao(Obrigatorio)(default:Policlínica, Alto do Café, Paiol Queimado, Outros)
+
+-----------------------------------------------------------------------------
+
+>>>>>>>>POLICLINICA
+
+ENTRADA DE MEDICAMENTOS
+
+Medicamento(Obrigatorio)
+Data da Entrada(Obrigatorio)
+Quantidade(Obrigatorio)
+Validade(Obrigatorio)
+Usuario Cadastrante(Obrigatorio)
+
+SAIDA DE MEDICAMENTOS
+
+Medicamento(Obrigatorio)
+Data da Saida(Obrigatorio)
+Quantidade(Obrigatorio)
+Validade(Obrigatorio)
+Usuario Cadastrante(Obrigatorio)
+Paciente(Obrigatorio)
+
+
+---------------------------------------------------------------------------------
+RELATORIOS
+
+COMUNS
+
+>Relacao de Usuarios Cadastrados(Filtros: Por Nome)
+>Relacao de Micro-Areas Cadastradas(Filtros: Por Codigo, Por Agente)
+>Relacao de Pacientes Cadastrados(Filtros: Por Nome, Por Micro-Área, Por Sexo)
+>Relacao de Medicamentos(Filtros: Por Nome)
+
+ENTRADA
+>Relacao de entradas(Filtros:(Por data)e/ou(Por micro-área, Por Medicamento + Total, Por Usuario))
+
+SAIDA
+>Relacao de saidas dadas(Filtros:(Por data)e/ou(Por micro-área, Por Medicamento + Total, Por Paciente))
+
+ESTOQUE
+>Relacao de medicamentos em estoque(Filtros:Por Medicamento)
